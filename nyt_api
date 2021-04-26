@@ -1,0 +1,124 @@
+Last login: Tue Apr 27 00:02:58 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+sjp-2:~ sjp$ /Users/sjp/Desktop/project 
+-bash: /Users/sjp/Desktop/project: is a directory
+sjp-2:~ sjp$ python
+Python 3.9.4 (v3.9.4:1f2e3088f3, Apr  4 2021, 12:32:44) 
+[Clang 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pynytimes import NYTAPI
+>>> 
+>>> 
+>>> from pynytimes import NYTAPI
+>>> nyt = NYTAPI("IXRSKWBlEQXJB855vvMbEVKXB8mWw043", parse_dates=True)
+>>> top_stories = nyt.top_stories()
+>>> top_arts_stories = nyt.top_stories(section = "arts")
+>>> import json
+>>> with open ('nyt_arts. txt', 'w') as outfile:
+... json.dump(top_arts_stories, outfile)
+  File "<stdin>", line 2
+    json.dump(top_arts_stories, outfile)
+    ^
+IndentationError: expected an indented block
+>>> with open ('nyt_arts. txt', 'w') as outfile:
+...     json.dump(top_arts_stories, outfile)
+...     
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+>>> >>> with open ('nyt_arts.txt', 'w') as outfile:
+...     json.dump(top_arts_stories, outfile)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type datetime is not JSON serializable
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+...     json.dump(top_arts_stories.title, outfile)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+AttributeError: 'list' object has no attribute 'title'
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+... ...     json.dump(top_arts_stories.'title', outfile)
+  File "<stdin>", line 2
+    ...     json.dump(top_arts_stories.'title', outfile)
+    ^
+IndentationError: expected an indented block
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+... ... json.dump(top_arts_stories.'title', outfile)
+  File "<stdin>", line 2
+    ... json.dump(top_arts_stories.'title', outfile)
+    ^
+IndentationError: expected an indented block
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+...     json.dump(top_arts_stories.'title', outfile)
+  File "<stdin>", line 2
+    json.dump(top_arts_stories.'title', outfile)
+                               ^
+SyntaxError: invalid syntax
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+...      json.dump(top_arts_stories['title'], outfile)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: list indices must be integers or slices, not str
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+...      json.dump(top_arts_stories(title), outfile)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+NameError: name 'title' is not defined
+>>> with open ('nyt_arts.txt', 'w') as outfile:
+...      json.dump(top_arts_stories('title'), outfile)
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
+TypeError: 'list' object is not callable
+>>> import csv
+>>> import pandas as pd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pandas'
+>>> install pandas
+  File "<stdin>", line 1
+    install pandas
+            ^
+SyntaxError: invalid syntax
+>>> pip install pandas
+  File "<stdin>", line 1
+    pip install pandas
+        ^
+SyntaxError: invalid syntax
+>>> conda create -n name_of_my_env python
+  File "<stdin>", line 1
+    conda create -n name_of_my_env python
+          ^
+SyntaxError: invalid syntax
+>>> 
