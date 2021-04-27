@@ -13,7 +13,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 >>> 
 >>> from pynytimes import NYTAPI
->>> nyt = NYTAPI("IXRSKWBlEQXJB855vvMbEVKXB8mWw043", parse_dates=True)
+>>> nyt = NYTAPI("", parse_dates=True)
 >>> top_stories = nyt.top_stories()
 >>> top_arts_stories = nyt.top_stories(section = "arts")
 >>> import json
